@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta id="viewport" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/popup.css">
+		<script type="text/javascript">document.write(unescape("%3Cspan style='position: fixed;top: -100%;' id='cnzz_stat_icon_1279764036'%3E%3C/span%3E%3Cscript src='https://s4.cnzz.com/z_stat.php%3Fid%3D1279764036' type='text/javascript'%3E%3C/script%3E"));</script>
+	</head>
+	<body>
+		<div id="Aztools616766349">
+			<header>
+				<img src="./image/48icon.png" alt="">
+				<b>AZ robot</b>
+				<button class="reloader" id="reload">刷新</button>
+				<!-- <button class="reloader">updata</button> -->
+				<!-- <span class="updatetime"></span> -->
+				<a href="/collection.html" target="_blank" class="tabview">收藏栏</a>
+			</header>
+			<div class="filter-bar">
+				<input type="text" id="searchText" style="width: 100px;" placeholder="关键词检索" />
+				<select id="filterFime">
+					<option value ="all">全部</option>
+					<option value ="t1">近24小时</option>
+					<option value="t3">近3天</option>
+					<option value="t7">近7天</option>
+				</select>
+				<select id="filterType">
+					<option value ="all">全部平台</option>
+					<option value ="noTwitter">非Twitter</option>
+					<option value ="Twitter">Twitter</option>
+					<option value="coindesk">coindesk</option>
+					<option value="cointelegraph">cointelegraph</option>
+					<option value="medium">medium</option>
+				</select>
+				<button id="searchTtn">查询</button>
+			</div>
+			<main>
+				<div class="chunk-list">
+				</div>
+				<div class="loading">
+					<img src="image/loading.gif" alt="">
+					<b>loading more!</b>
+				</div>
+			</main>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+	<!-- 公共方法 -->
+	<script type="text/javascript" src="js/common.js"></script>
+	<!-- 入口 -->
+	<script type="text/javascript" src="js/popup.js"></script>
+</html>

@@ -1,0 +1,73 @@
+.login{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  background: url(../image/bg.jpg) no-repeat center center/cover;
+  #headline{
+    display: none;
+  }
+  .form{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 340px;
+    max-width: 100%;
+    padding: 10px;
+    color: #fff;
+    input{
+      width: 100%;
+      margin-bottom: 20px;
+      background: transparent;
+      border: 1px solid rgba(250,250,250,.8);
+      height: 50px;
+      line-height: 48px;
+      font-size: 14px;
+      padding: 0 25px;
+      border-radius: 25px;
+      caret-color: rgba(255,255,255,.8);
+      &::placeholder{
+        color: #fff;
+      }
+    }
+    button{
+      height: 50px;
+      margin-top: 0px;
+      line-height: 48px;
+      font-size: 20px;
+      width: 100%;
+      border-radius: 25px;
+      color: #fff;
+      cursor: pointer;
+      background: rgba(0,0,0,.6);
+      &:hover{
+        background: rgba(0,0,0,.7);
+      }
+    }
+    h3{
+      font-size: 30px;
+      text-align: center;
+    }
+    p{
+      margin-top: 20px;
+      text-align: center;
+      font-size: 12px;
+    }
+  }
+  #paopao{
+    background: transparent;
+    opacity: .3;
+  }
+  .logo{
+    position: relative;
+    height: 100px;
+  }
+  #titleCanvas{
+    // position: absolute;
+    // left: 50%;
+    // top: 50%;
+    // transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+  }
+}

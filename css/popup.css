@@ -1,0 +1,35 @@
+#Aztools616766349 {
+  background: #090723;
+  height: 100%;
+  min-height: 600px;
+  padding-top: 60px;
+}
+#Aztools616766349 .filter-bar {
+  padding: 10px;
+}
+#Aztools616766349 .filter-bar input,
+#Aztools616766349 .filter-bar select,
+#Aztools616766349 .filter-bar button {
+  border: none;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  height: 36px;
+  line-height: 24px;
+}
+#Aztools616766349 .filter-bar select option {
+  background: #000;
+}
+#Aztools616766349 .filter-bar input {
+  padding: 0 10px;
+}
+#Aztools616766349 .filter-bar button {
+  background: #1296db;
+  cursor: pointer;
+  text-align: center;
+  width: 80px;
+}
+#Aztools616766349 .filter-bar button:hover {
+  background: #05a4f8;
+}
