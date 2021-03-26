@@ -11,12 +11,13 @@
 	<body>
 		<div id="Aztools616766349">
 			<header>
-				<img src="./image/48icon.png" alt="">
-				<b>AZ robot</b>
-				<button class="reloader" id="reload">刷新</button>
-				<!-- <button class="reloader">updata</button> -->
-				<!-- <span class="updatetime"></span> -->
-				<a href="/collection.html" target="_blank" class="tabview">收藏栏</a>
+				<a href="/">
+					<img src="./image/48icon.png" alt="">
+					<b>AZ robot[收藏栏]</b>
+				</a>
+				<button class="az-btn primary fl" id="reload">刷新</button>
+				<a href="/collection.html" class="az-btn primary fr" target="_blank">收藏栏</a>
+				<button class="fr az-btn dange" id="logout" onclick="logout()">退登</button>
 			</header>
 			<div class="filter-bar">
 				<input type="text" id="searchText" style="width: 100px;" placeholder="关键词检索" />

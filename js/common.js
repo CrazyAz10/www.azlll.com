@@ -1,5 +1,5 @@
-var sever_url = "http://localhost:8642";
-// var sever_url = "";
+// var sever_url = "http://localhost:8642";
+var sever_url = "";
 
 function parseTime(time, cFormat) {
   if (arguments.length === 0) {
@@ -48,7 +48,7 @@ function azMessage(msg) {
   this.createMessage = function(message) {
     var msDom = $(`<div class="az-message">${message}</div>`);
     $('body').append(msDom);
-    msDom.animate({top: "50px"},300,'linear',() => {
+    msDom.animate({top: msDom.height()+50+"px"},300,'linear',() => {
       setTimeout(() => {
         if(msDom){
           msDom.animate({opacity: "0"},500,'linear',() => {
@@ -75,7 +75,7 @@ function azMessage(msg) {
 * fn [function] 需要防抖的函数
 * delay [number] 毫秒，防抖期限值
 */
-function debounce(fn,delay){
+function debounce(fn,delay = 1000){
   let timer = null //借助闭包
   return function() {
       if(timer){
@@ -85,4 +85,44 @@ function debounce(fn,delay){
           timer = setTimeout(fn,delay) // 进入该分支说明当前并没有在计时，那么就开始一个计时
       }
   }
+}
+
+// 节流
+function throttle(fn,wait = 1000){
+  var timer = null;
+  return function(){
+      var context = this;
+      var args = arguments;
+      if(!timer){
+          timer = setTimeout(function(){
+              fn.apply(context,args);
+              timer = null;
+          },wait)
+      }
+  }
+}
+
+
+// 重新封装ajax 请求头带token
+function AzAjax(options) {
+  return new Promise((resolve,reject) => {
+    token = window.localStorage.getItem('az_token')
+    let headers = {
+      authorization: token ? token : ""
+    }
+    options.headers ? Object.assign(options.headers,headers) : options.headers = headers;
+    console.log(options)
+    $.ajax(options).then(resolve,reject)
+  }) 
+}
+
+// 跳转登录页
+function linkToLogin(){
+	window.location.href = "/login.html"
+}
+
+// 登出
+function logout() {
+  window.localStorage.setItem('az_token','');
+  linkToLogin()
 }

@@ -25,7 +25,9 @@
   border: 1px solid rgba(250, 250, 250, 0.8);
   height: 50px;
   line-height: 48px;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
   padding: 0 25px;
   border-radius: 25px;
   caret-color: rgba(255, 255, 255, 0.8);
@@ -33,12 +35,18 @@
 .login .form input::placeholder {
   color: #fff;
 }
+.login .form input:-webkit-autofill,
+.login .form input textarea:-webkit-autofill,
+.login .form input select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset;
+}
 .login .form button {
   height: 50px;
   margin-top: 0px;
-  line-height: 48px;
+  line-height: 46px;
   font-size: 20px;
   width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 25px;
   color: #fff;
   cursor: pointer;
@@ -46,6 +54,7 @@
 }
 .login .form button:hover {
   background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .login .form h3 {
   font-size: 30px;
@@ -54,7 +63,7 @@
 .login .form p {
   margin-top: 20px;
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
 }
 .login #paopao {
   background: transparent;

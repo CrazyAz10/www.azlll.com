@@ -100,7 +100,7 @@ function rendDataList(data) {
 function getList() {
 	$("#Aztools616766349 .chunk-list").html("");
 	$("#Aztools616766349 .loading").show();
-	$.ajax({
+	AzAjax({
 		url: sever_url + '/base_api/getArticle',
 		type: 'get',
 		dataType: 'json',
@@ -115,6 +115,10 @@ function getList() {
 		    $("#Aztools616766349 .loading").hide();
       }
 		}else{
+			if(res.code == 405){
+				linkToLogin()
+				return;
+			}
       $("#Aztools616766349 .chunk-list").html("<p style='text-align: center'>暂无数据!</p>")
       $("#Aztools616766349 .loading").hide();
     }
@@ -127,7 +131,7 @@ function getList() {
 
 // 删除文章
 function changeStatus(id) {
-	$.ajax({
+	AzAjax({
 		url: sever_url + '/base_api/updateArticle',
 		type: 'post',
 		dataType: 'json',
@@ -141,6 +145,10 @@ function changeStatus(id) {
 			// 从新渲染数据
 			filterData();
 		}else {
+			if(res.code == 405){
+				linkToLogin()
+				return;
+			}
 			azMessage(`文章id: ${id} 删除失败！`);
 		}
 	},err => {
@@ -151,7 +159,7 @@ function changeStatus(id) {
 
 // 收藏文章
 function changecollection(id) {
-	$.ajax({
+	AzAjax({
 		url: sever_url + '/base_api/updateArticle',
 		type: 'post',
 		dataType: 'json',
@@ -166,6 +174,10 @@ function changecollection(id) {
 			// 从新渲染数据
 			filterData();
 		}else {
+			if(res.code == 405){
+				linkToLogin()
+				return;
+			}
 			azMessage(`文章id: ${id} 收藏失败！`);
 		}
 	},err => {
@@ -173,6 +185,7 @@ function changecollection(id) {
 		azMessage(`文章id: ${id} 收藏失败！`);
 	})
 }
+
 
 // loaded
 $(function(){

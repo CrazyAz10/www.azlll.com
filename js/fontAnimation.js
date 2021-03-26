@@ -37,8 +37,8 @@ function Particle(x, y) {
 }
 
 Particle.prototype.render = function () {
-  this.accX = (this.dest.x - this.x) / 1000;
-  this.accY = (this.dest.y - this.y) / 1000;
+  this.accX = (this.dest.x - this.x) / 200;
+  this.accY = (this.dest.y - this.y) / 200;
   this.vx += this.accX;
   this.vy += this.accY;
   this.vx *= this.friction;
@@ -56,8 +56,8 @@ Particle.prototype.render = function () {
 
   var distance = Math.sqrt(a * a + b * b);
   if (distance < (radius * 25)) {
-    this.accX = (this.x - mouse.x) / 100;
-    this.accY = (this.y - mouse.y) / 100;
+    this.accX = (this.x - mouse.x) / 200;
+    this.accY = (this.y - mouse.y) / 200;
     this.vx += this.accX;
     this.vy += this.accY;
   }

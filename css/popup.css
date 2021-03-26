@@ -16,7 +16,7 @@
   border: 1px solid #eee;
   border-radius: 5px;
   height: 36px;
-  line-height: 24px;
+  vertical-align: middle;
 }
 #Aztools616766349 .filter-bar select option {
   background: #000;
