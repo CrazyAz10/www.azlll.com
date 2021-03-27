@@ -1,10 +1,16 @@
 #Aztools616766349 {
-  background: #090723;
-  height: 100%;
+  padding-top: 120px;
+  background: #282735;
   min-height: 600px;
-  padding-top: 60px;
 }
 #Aztools616766349 .filter-bar {
+  position: fixed;
+  left: 0;
+  top: 60px;
+  right: 0;
+  z-index: 10000;
+  background: #191927;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   padding: 10px;
 }
 #Aztools616766349 .filter-bar input,
@@ -32,4 +38,14 @@
 }
 #Aztools616766349 .filter-bar button:hover {
   background: #05a4f8;
+}
+@media screen and (max-width: 375px) {
+  #Aztools616766349 .filter-bar #searchText {
+    display: none!important;
+  }
+}
+@media screen and (max-width: 320px) {
+  #Aztools616766349 #reload {
+    display: none!important;
+  }
 }

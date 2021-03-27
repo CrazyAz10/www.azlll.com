@@ -1,9 +1,15 @@
 #Aztools616766349{
-  background: #090723;
-  height: 100%;
+  padding-top: 120px;
+  background: rgba(40, 39, 53, 1);
   min-height: 600px;
-  padding-top: 60px;
   .filter-bar{
+    position: fixed;
+    left: 0;
+    top: 60px;
+    right: 0;
+    z-index: 10000;
+    background: rgb(25, 25, 39);
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 20%);
     padding: 10px;
     input,select,button{
       border: none;
@@ -30,6 +36,23 @@
       &:hover{
         background: #05a4f8;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #Aztools616766349{
+    .filter-bar{
+      #searchText{
+        display: none!important;
+      }
+    }
+  }
+}
+@media screen and (max-width: 320px) {
+  #Aztools616766349{
+    #reload{
+      display: none!important;
     }
   }
 }
