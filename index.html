@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta id="viewport" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
-		<title></title>
+		<title>Crazy Az</title>
 		<link rel="stylesheet" type="text/css" href="css/common.css">
 		<link rel="stylesheet" type="text/css" href="css/popup.css">
 		<script type="text/javascript">document.write(unescape("%3Cspan style='position: fixed;top: -100%;' id='cnzz_stat_icon_1279764036'%3E%3C/span%3E%3Cscript src='https://s4.cnzz.com/z_stat.php%3Fid%3D1279764036' type='text/javascript'%3E%3C/script%3E"));</script>
@@ -12,16 +12,17 @@
 		<div id="Aztools616766349">
 			<header>
 				<a href="/">
-					<img src="./image/48icon.png" alt="">
-					<b>AZ robot</b>
+					<img src="./image/logo.png" alt="">
+					<!-- <b>Crazy Az</b> -->
 				</a>
-				<button class="az-btn primary fl" id="reload">刷新</button>
-				<a href="/collection.html" class="az-btn primary fr" target="_blank">收藏栏</a>
+				<a href="/notice.html" class="az-btn primary fl">公告栏</a>
+				<!-- <button class="az-btn primary fl" id="reload">刷新</button> -->
+				<a href="/collection.html" class="az-btn primary fr">收藏栏</a>
 				<button class="fr az-btn dange" id="logout" onclick="logout()">退登</button>
 			</header>
 			<div class="filter-bar">
 				<input type="text" id="searchText" style="width: 100px;" placeholder="关键词检索" />
-				<select id="filterFime">
+				<select id="filterTime">
 					<option value ="all">全部</option>
 					<option value ="t1">近24小时</option>
 					<option value="t3">近3天</option>
@@ -40,6 +41,9 @@
 			<main>
 				<div class="chunk-list">
 				</div>
+				<div class="more-load">
+					加载更多
+				</div>
 				<div class="loading">
 					<img src="image/loading.gif" alt="">
 					<b>loading more!</b>
@@ -51,5 +55,6 @@
 	<!-- 公共方法 -->
 	<script type="text/javascript" src="js/common.js"></script>
 	<!-- 入口 -->
+	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/popup.js"></script>
 </html>

@@ -112,7 +112,6 @@ function AzAjax(options) {
       authorization: token ? token : ""
     }
     options.headers ? Object.assign(options.headers,headers) : options.headers = headers;
-    console.log(options)
     $.ajax(options).then(resolve,reject)
   }) 
 }

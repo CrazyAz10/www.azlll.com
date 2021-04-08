@@ -73,7 +73,7 @@ body {
 
 html,
 body {
-	height: 100%;
+	min-height: 100%;
 	background-color: white;
 }
 
@@ -130,6 +130,7 @@ body {
 	position: fixed;
 	top: 0;
 	left: 50%;
+  z-index: 999999;
 	min-height: 50px;
 	padding: 0 10px;
 	background: #fff;
@@ -145,7 +146,7 @@ body {
 
 #Aztools616766349{
   background: #090723;
-  min-height: 600px;
+  min-height: 100vh;
   padding-top: 60px;
   header{
     position: fixed;
@@ -247,4 +248,14 @@ body {
 			vertical-align: middle;
 		}
 	}
+  .more-load{
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+    font-weight: 700;
+    &:hover{
+      color: #fff;
+    }
+  }
 }
