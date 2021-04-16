@@ -1,5 +1,5 @@
-var sever_url = "";
-// var sever_url = "http://localhost:8642";
+// var sever_url = "";
+var sever_url = "http://localhost:8642";
 
 function parseTime(time, cFormat) {
   if (arguments.length === 0) {
